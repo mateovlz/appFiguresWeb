@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/materialize.css">
+    <link rel="stylesheet" href="../assets/css/materialize.min.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <title>Parcial Corte 1</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 cards info-size">
+                <div class="col s7 info-container">
+                    <p class="main-title">PARCIAL CORTE 1</p>
+                </div>
+                <div class="col s5">
+                    <div class="flex-container">
+                        <div>
+                            <p class="person-title">Mateo Andres Velez Medina</p>
+                            <p class="person-code">Codigo: 174034</p>
+                            <p class="person-title">Santiago Leon Aguirre</p>
+                            <p class="person-code">Codigo: 174021</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 cards">
+                <div class=" col s3  ">
+                    <img src="../assets/images/Calculadora.svg" alt="Calculadora" srcset="" class="calculator">
+                </div>
+                <div class=" col s9 center-align">
+                    <p class="main-title">Calcula tus figuras geometricas</p>
+                </div>
+            </div>
+            <!---Bidimensionales-->
+            <div class="col s12 cards info-size-cards-bidi">
+                <div class="flex-container">
+                    <div class="cards-title-container">
+                        <p class="cards-title">Figuras Bidimensionales</p>
+                    </div>
+                    <div>
+                        <div class="col s6 images-cards-container">
+                            <img class="trapecio" src="../assets/images/Trapecio.svg" alt="Trapecio">
+                            <img class="triangulo" src="../assets/images/Triangulo.svg" alt="">
+                        </div>
+
+                        <!--Container Calculos-->
+                        <div class="flex-container col s6 info-calculos">
+                            <!---Calcular-->
+                            <div class="container-calculos">
+                                <div>
+                                    <p class="calculos-title">Calcular el Area y Perimetro:</p>
+                                </div>
+                                <div>
+                                    <p class="calculos-title sub-title">Trapecio</p>
+                                    <form action="" method="post">
+                                        <table class="centered info-table-bidi">
+                                            <thead class="container-th">
+                                                <tr>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Base Mayor:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Base Menor:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Altura:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Lado Derecho:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Lado Izquierdo:</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="base_mayor" id="base_mayor" class="containers-input" placeholder="Trapecio" onchange="valBidimensional()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="base_menor" id="base_menor" class="containers-input" placeholder="Trapecio" onchange="valBidimensional()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="altura_tra" id="altura_tra" class="containers-input" placeholder="Trapecio" onchange="valBidimensional()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="lado_derecho_tra" id="lado_derecho_tra" class="containers-input" placeholder="Trapecio" onchange="valBidimensional()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="lado_izquierdo_tra" id="lado_izquierdo_tra" class="containers-input" placeholder="Trapecio" onchange="valBidimensional()">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div class="container-buttons">
+                                    <a class="btn-calcular" name="btnGuardarBidi" id="btnGuardarBidi" onclick="calculateBidimensionaltra()">
+                                        <p class="text-buttons">Calcular</p>
+                                    </a>
+                                    <a class="btn_limpiar" onclick="limpiaIngresos(1)">
+                                        <p class="text-buttons">Limpiar</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <p class="calculos-title sub-title">Triangulo</p>
+                                    <form action="" method="post">
+                                        <table class="centered info-table-bidi">
+                                            <thead class="container-th">
+                                                <tr>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Lado Derecho:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Lado Izquierdo:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Base:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Altura:</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="lado_derecho_tri" id="lado_derecho_tri" class="containers-input" placeholder="Triangulo" onchange="valBidimensionaldos()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="lado_izquierdo_tri" id="lado_izquierdo_tri" class="containers-input" placeholder="Triangulo" onchange="valBidimensionaldos()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="base_tri" id="base_tri" class="containers-input" placeholder="Triangulo" onchange="valBidimensionaldos()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="altura_tri" id="altura_tri" class="containers-input" placeholder="Triangulo" onchange="valBidimensionaldos()">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div class="container-buttons">
+                                    <a class="btn-calcular" name="btnGuardarBidi2" id="btnGuardarBidi2" onclick="calculateBidimensionaltri()">
+                                        <p class="text-buttons">Calcular</p>
+                                    </a>
+                                    <a class="btn_limpiar" onclick="limpiaIngresos(2)">
+                                        <p class="text-buttons">Limpiar</p>
+                                    </a>
+                                </div>
+                                </form>
+                            </div>
+                            <!---Resultados-->
+                            <div class="container-calculos container-resultados">
+                                <div>
+                                    <p class="calculos-title" style="font-weight: bold !important;"> Resultados:</p>
+                                </div>
+                                <div>
+                                    <table class="info-table-bidi">
+                                        <thead class="container-th">
+                                            <tr>
+                                                <th class="container-title-table">
+                                                </th>
+                                                <th class="container-title-table">
+                                                    <p class="container-th-p">Trapecio:</p>
+                                                </th>
+                                                <th class="container-title-table">
+                                                    <p class="container-th-p">Triangulo</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody class="container-tr">
+                                            <tr>
+                                                <td class="container-tr-td">
+                                                    <p class="results-titles">Area:</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_area_trapecio" id="resul_area_trapecio" class="results-vals">0000</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_area_triangulo" id="resul_area_triangulo" class="results-vals">0000</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="results-titles">Perimetro:</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_perimetro_trapecio" id="resul_perimetro_trapecio" class="results-vals">0000</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_perimetro_triangulo" id="resul_perimetro_triangulo" class="results-vals">0000</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="container-obsevations">
+                                    <p class="observations">
+                                        Nota: Se debera tener en cuenta que si no se ingresa la altura de alguna de las dos figuras no se calculara el area correctamente, si no ingresa ningun valor se tomara 0 por defecto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---Tridimensionales-->
+            <div class="col s12 cards info-size-cards-bidi">
+                <div class="flex-container">
+                    <div class="cards-title-container">
+                        <p class="cards-title">Figuras Tridimensionales</p>
+                    </div>
+                    <div>
+                        <div class="col s6 images-cards-container">
+                            <img class="isocaedro" src="../assets/images/Isocaedro.svg" alt="isocaedro">
+                            <img class="decaedro" src="../assets/images/Decaedro.svg" alt="">
+                        </div>
+
+                        <!--Container Calculos-->
+                        <div class="flex-container col s6 info-calculos">
+                            <!---Calcular-->
+                            <div class="container-calculos">
+                                <div>
+                                    <p class="calculos-title">Calcular el Area y Volumen:</p>
+                                </div>
+                                <div>
+                                    <form action="" method="post">
+                                        <table class="centered info-table-bidi">
+                                            <thead class="container-th">
+                                                <tr>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Arista:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">Arista:</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" min="0" name="arista_icosaedro" id="arista_icosaedro" class="containers-input" placeholder="Icosaedro" onchange="valTridimensional()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="arista_decaedro" id="arista_decaedro" class="containers-input" placeholder="Dodecaedro" onchange="valTridimensional()">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div class="container-buttons">
+                                    <a class="btn-calcular" id="btnCalcularTridi" onclick="calculateTridimensional()">
+                                        <p class="text-buttons">Calcular</p>
+                                    </a>
+                                    <a class="btn_limpiar">
+                                        <p class="text-buttons" onclick="limpiaIngresos(3)">Limpiar</p>
+                                    </a>
+                                </div>
+                                </form>
+                            </div>
+                            <!---Resultados-->
+                            <div class="container-calculos container-resultados">
+                                <div>
+                                    <p class="calculos-title" style="font-weight: bold !important;"> Resultados:</p>
+                                </div>
+                                <div>
+                                    <table class="info-table-bidi">
+                                        <thead class="container-th">
+                                            <tr>
+                                                <th class="container-title-table">
+                                                </th>
+                                                <th class="container-title-table">
+                                                    <p class="container-th-p">Icosaedro:</p>
+                                                </th>
+                                                <th class="container-title-table">
+                                                    <p class="container-th-p">Dodecaedro:</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody class="container-tr">
+                                            <tr>
+                                                <td class="container-tr-td">
+                                                    <p class="results-titles">Area:</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_area_isocaedro" id="resul_area_isocaedro" class="results-vals">0000</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_area_decaedro" id="resul_area_decaedro" class="results-vals">0000</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="results-titles">Volumen:</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_volumen_isocaedro" id="resul_volumen_isocaedro" class="results-vals">0000</p>
+                                                </td>
+                                                <td class="container-tr-td">
+                                                    <p name="resul_volumen_decaedro" id="resul_volumen_decaedro" class="results-vals">0000</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="container-obsevations">
+                                    <p class="observations">
+                                        Nota: Se debera tener en cuenta que el boton de calcular generar el resultado para las dos figuras si no ingresa ningun valor se tomara 0 por defecto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 cards info-size-cards-bidi">
+                <div class="flex-container">
+                    <div class="cards-title-container">
+                        <p class="cards-title">Formulacion Ecuacion</p>
+                    </div>
+                    <div>
+                        <img class="ecuacion" src="../assets/images/Ecuacion.svg" alt="" srcset="">
+                    </div>
+                    <div>
+                        <!--Calculos-->
+                        <div class="info-formulacion-calculos">
+                            <div class="col s6 info-formulacion-calculos">
+                                <div>
+                                    <p class="calculos-title">Calcular Formula:</p>
+                                </div>
+                                <div>
+                                    <form action="" method="post">
+                                        <table class="centered info-table-bidi">
+                                            <thead class="container-th">
+                                                <tr>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">a:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">b:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">c:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">d:</p>
+                                                    </th>
+                                                    <th class="container-title-table">
+                                                        <p class="container-th-p">e:</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="vlr_a" id="vlr_a" class="containers-input" placeholder="a" onchange="valEcuacion()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vlr_b" id="vlr_b" class="containers-input" placeholder="b" onchange="valEcuacion()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vlr_c" id="vlr_c" class="containers-input" placeholder="c" onchange="valEcuacion()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vlr_d" id="vlr_d" class="containers-input" placeholder="d" onchange="valEcuacion()">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="vlr_e" id="vlr_e" class="containers-input" placeholder="e" onchange="valEcuacion()">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div class="container-buttons">
+                                    <a class="btn-calcular" name="btnCalculateForm" id="btnCalculateForm" onclick="calculateFormula()">
+                                        <p class=" text-buttons ">Calcular</p>
+                                    </a>
+                                    <a class="btn_limpiar " onclick="limpiaIngresos(4)">
+                                        <p class="text-buttons ">Limpiar</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col s6 info-formulacion-calculos ">
+                                <div>
+                                    <p class="calculos-title " style="font-weight: bold !important; "> Resultados:</p>
+                                </div>
+                                <div>
+                                    <div class="col s3 ">
+                                        <p class="results-titles ">Y:</p>
+                                    </div>
+                                    <div class="col s3 ">
+                                        <p class="results-vals " name="vlr_y" id="vlr_y">0000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex-container ">
+                            <div class="container-exportar-ecuacion ">
+                                <p name="resul_Export" id="resul_Export" onchange="valEcuacion()">Exportar Ecuacion</p>
+                            </div>
+                            <div class="container-obsevations ">
+                                <p class="observations obser-ecuacion">
+                                    Nota: Se debera tener encuenta que no se admiten valores negativos, se realizaran validacion de raices cuadradas positivas, divisiones no negativos o iguales a cero y valores entre -1 y 1 en los arcocoseno y arcoseno. Podra utilizar la ecuacion exportada
+                                    en
+                                    <a href="https://www.wolframalpha.com/">WolframAlpha</a>, si no ingresa ningun valor se tomara 0 por defecto.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../assets/js/index.js "></script>
+
+</html>

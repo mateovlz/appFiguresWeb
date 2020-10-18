@@ -1,0 +1,379 @@
+@font-face {
+    font-family: monserrat-bold;
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: monserrat-semibold;
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: monserrat-normal;
+    src: url('../fonts/Montserrat/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: poppins-normal;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+body {
+    background-color: #072134;
+}
+
+.cards {
+    position: relative;
+    width: 87%;
+    height: 260px;
+    left: 88px;
+    top: 51px;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px rgba(20, 18, 18, 0.5);
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+
+/*Estilo svg calculadora*/
+
+.calculator {
+    width: 150px;
+    margin-top: 25px;
+    margin-left: 50px;
+    position: absolute;
+}
+
+
+/*
+Estilos Tamanios 
+*/
+
+.info-size {
+    height: 260px;
+}
+
+.info-size-cards-bidi {
+    height: 100%;
+}
+
+.info-calculos {}
+
+.info-table-bidi {
+    border: none;
+}
+
+
+/*
+Estilos de titulos
+*/
+
+.main-title {
+    font-family: monserrat-bold;
+    font-size: 45px;
+}
+
+.cards-title {
+    font-family: monserrat-bold;
+    font-size: 25px;
+    align-self: center;
+    margin-bottom: 0px;
+}
+
+.person-title {
+    font-family: monserrat-bold;
+    font-size: 22px !important;
+}
+
+.person-code {
+    font-family: monserrat-semibold;
+    font-size: 18px;
+}
+
+.calculos-title {
+    font-family: monserrat-bold;
+    font-size: 25px;
+    align-self: left;
+    margin-bottom: 0px;
+}
+
+.titulo-resultados {
+    font-family: monserrat-bold;
+    font-size: 25px;
+    align-self: left;
+    margin-left: 15px;
+}
+
+.observations {
+    color: #707070;
+    font-family: monserrat-normal;
+    font-size: 14px;
+    font-weight: 700;
+    width: 400px;
+    align-self: center;
+    text-align: center;
+}
+
+.obser-ecuacion {
+    width: 900px;
+}
+
+
+/*
+Estilos de Contenedores
+*/
+
+.cards-title-container {
+    align-items: center;
+    align-self: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.images-cards-container {
+    width: 250;
+    margin-top: 50px;
+}
+
+.container-calculos {
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+}
+
+.container-resultados {
+    align-self: flex-start;
+    width: 180px;
+}
+
+.info-formulacion-calculos {
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+}
+
+.container-observations {}
+
+.container-exportar-ecuacion {
+    width: 100% !important;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: auto !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.50) !important;
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border: 10px #000000 !important;
+    border-bottom: none !important;
+    font-family: poppins-normal;
+    text-align: center;
+    font-size: 17px;
+    color: #373737;
+    margin-top: 30px;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.container-buttons-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 15px;
+}
+
+
+/*Estilos de Imagenes o SVGs*/
+
+.triangulo {
+    width: 150px;
+    margin-top: 50px;
+    padding-right: 0px;
+}
+
+.trapecio {
+    width: 250px;
+    margin-left: 0px;
+}
+
+.isocaedro {
+    width: 200px;
+    margin-left: 25px;
+}
+
+.decaedro {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+.ecuacion {
+    margin-top: 35px;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+/*Botones bidimensional*/
+
+.text-buttons {
+    text-align: center;
+    margin: 9px;
+}
+
+.btn-calcular {
+    width: 117px;
+    height: 36px;
+    left: 195px;
+    top: 151px;
+    background: #FF5D30;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: poppins-normal;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn_limpiar {
+    margin-left: 30px;
+    width: 117px;
+    height: 36px;
+    left: 400px;
+    top: 151px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #FF5D30;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: poppins-normal;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-exportar {
+    width: 117px;
+    height: 36px;
+    left: 195px;
+    top: 151px;
+    background: #FF5D30;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: poppins-normal;
+    font-weight: 600;
+    align-items: right;
+    justify-content: right;
+}
+
+.btn-exportar-limpiar {
+    margin-left: 30px;
+    width: 117px;
+    height: 36px;
+    left: 400px;
+    top: 151px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #FF5D30;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: poppins-normal;
+    font-weight: 600;
+    align-items: right;
+    justify-content: right;
+    text-align: center;
+}
+
+
+/*
+Estilos Tabla
+*/
+
+.containers-input {
+    width: 92% !important;
+    height: 35px !important;
+    left: 160px !important;
+    top: 101px !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.50) !important;
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border: 10px #000000 !important;
+    border-bottom: none !important;
+    font-family: poppins-normal;
+    text-align: center;
+    font-size: 17px;
+}
+
+.container-th,
+tr {
+    border: none !important;
+    padding: 2px !important;
+}
+
+.container-tr-td {
+    border: none !important;
+    padding: 2px !important;
+}
+
+.container-th,
+tr,
+td {
+    border: none !important;
+    padding: 0px !important;
+    margin-top: 0px !important;
+}
+
+.container-title-table {
+    padding-bottom: 10px;
+}
+
+.container-th-p {
+    margin: 0px;
+    font-family: poppins-bold;
+    font-size: 15px;
+}
+
+
+/*
+Estilos Tabla Resultados
+*/
+
+.results-titles {
+    padding-right: 50px;
+    font-family: monserrat-bold;
+    font-size: 15px;
+    color: #000000;
+    margin: 0px;
+}
+
+.results-vals {
+    text-align: center;
+    font-family: monserrat-normal;
+    font-size: 19px;
+    color: #000000;
+    margin: 0px;
+}
