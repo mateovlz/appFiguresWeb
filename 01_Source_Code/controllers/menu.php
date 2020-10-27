@@ -7,7 +7,7 @@
     require(".././controllers/HandlerView.php");
 
     switch ($_POST['accion']){
-        case 1: BidiFigureTrap(nvl($_POST['base_mayor'],1),
+        case 1: BidiFigureTrap($_POST['base_mayor'],
                                $_POST['base_menor'],
                                $_POST['altura_tra'],
                                $_POST['lado_derecho_tra'],
@@ -35,7 +35,7 @@
 
    function BidiFigureTrap($BaseMayor,$BaseMenor,$Altura,$LadoDerecho,$LadoIzquierdo){
        $Valida = ValidaAlfanumerico($BaseMayor,$BaseMenor,$Altura,$LadoDerecho,$LadoIzquierdo);
-       if ($Valida = 0){
+       if ($Valida <= 0){
         $Figure = new TrapFigure(nvl($BaseMayor,0),nvl($BaseMenor,0),nvl($Altura,0),nvl($LadoDerecho,0),nvl($LadoIzquierdo,0));
         $Area = $Figure->getArea();
         $Perimeter = $Figure->getPerimeter();
@@ -100,7 +100,7 @@
 
    function AlertaError($Info){
     $TemplateGenerica = new HandlerView('000','000','000','000','000','000','000','000','000','Exportar Ecuacion');
-    $Alerta = "<script> alert(' ". $Info ."');window.location.href='/index.php';
+    $Alerta = "<script> alert(' ". $Info ."');window.location.href='/01_source_code/index.php';
     </script>"; 
     echo $TemplateGenerica->getTemplate();
     echo $Alerta;
